@@ -55,7 +55,7 @@ main {
     border: none;
 }
 
-.loginSection form button {
+#buttonSubmit {
     padding: 13px 15px;
     margin: 10px;
     width: 280px;
@@ -65,4 +65,9 @@ main {
     font-size: 18px;
     border: none;
     cursor: pointer;
+}
+
+#buttonSubmit:disabled {
+    background: grey;
+    cursor: default;
 }
