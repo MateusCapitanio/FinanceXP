@@ -1,9 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-// import { IChangeButton } from "../interfaces/ChangeButton";
-// import myContext from '../contexts/myContext';
-
 // CSS
 import "../styles/loginStyle.css";
 
@@ -16,7 +13,6 @@ function Login() {
 
   useEffect(() => {
     const valueReturn = localStorage.getItem("user");
-    // const user = JSON.parse(valueReturn);
     if (valueReturn !== null) {
       navigate("/home");
     }
@@ -42,12 +38,15 @@ function Login() {
 
     const emailString = JSON.stringify(email);
     localStorage.setItem("user", emailString);
+
+    const loginDate = JSON.stringify(new Date());
+    localStorage.setItem("horario", loginDate);
     navigate("/home");
   };
 
   return (
     <div>
-      <main>
+      <main className="main">
         <section className="loginSection">
           <h1>Login</h1>
           <form>
