@@ -6,7 +6,6 @@ import { arrayAcoes } from "../utils/acoes";
 
 // CSS
 import "../styles/homestyle.css";
-import Negotiate from "../components/Negotiate";
 
 function Home() {
   const navigate = useNavigate();
@@ -69,7 +68,7 @@ function Home() {
                 <th>Valor (R$)</th>
                 <th>Negociar</th>
               </tr>
-              {arrayAcoesDisp.map((action: any, i: number) => (
+              {arrayAcoesDisp.map((action: any) => (
                 <tr key={action.name}>
                   <td className="actionName">{action.name}</td>
                   <td>{action.qtd}</td>
@@ -95,9 +94,6 @@ function Home() {
               ))}
             </table>
           </div>
-        </section>
-        <section className="negotiatePopup">
-          <h1>Comprar/Vender Ação</h1>
         </section>
       </main>
     </div>

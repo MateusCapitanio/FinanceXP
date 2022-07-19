@@ -1,4 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Negotiate from "./components/Negotiate";
 
 import Provider from "./contexts/Provider";
 import Home from "./pages/Home";
@@ -11,6 +12,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Login />} />
           <Route path="/home" element={<Home />} />
+          <Route path="/negotiate" element={<Negotiate />} />
         </Routes>
       </Provider>
     </BrowserRouter>
