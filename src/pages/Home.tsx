@@ -1,11 +1,17 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+
+import myContext from "../contexts/myContext";
+import { arrayAcoes } from "../utils/acoes";
 
 // CSS
 import "../styles/homestyle.css";
+import Negotiate from "../components/Negotiate";
 
 function Home() {
   const navigate = useNavigate();
+  const context: any = useContext(myContext);
+  const { arrayAcoesDisp, setArrayAcoesDisp } = context;
 
   const [user, setUser]: [user: string, setUser: any] = useState("");
 
@@ -15,11 +21,17 @@ function Home() {
       navigate("/home");
     }
     setUser(valueReturn);
+
+    setArrayAcoesDisp(arrayAcoes);
   }, []);
 
   const logoutFunc = () => {
     localStorage.clear();
     navigate("/");
+  };
+
+  const redirectNegotiate = () => {
+    navigate("/negotiate");
   };
 
   return (
@@ -43,21 +55,12 @@ function Home() {
                 <th>Valor (R$)</th>
                 <th>Negociar</th>
               </tr>
-              <tr>
-                <td>Alfreds Futterkiste</td>
-                <td>Maria Anders</td>
-                <td>Germany</td>
-                <td className="actionButtons">
-                  <button type="button">Vender</button>
-                  <button type="button">Comprar</button>
-                </td>
-              </tr>
             </table>
           </div>
         </section>
 
         <section className="actionsStyle">
-          <div>Disponíveis para investir:</div>
+          <div className="titleActions">Disponíveis para investir:</div>
           <div className="scrollMenu">
             <table>
               <tr className="descriptions">
@@ -66,17 +69,35 @@ function Home() {
                 <th>Valor (R$)</th>
                 <th>Negociar</th>
               </tr>
-              <tr>
-                <td>Alfreds Futterkiste</td>
-                <td>Maria Anders</td>
-                <td>Germany</td>
-                <td className="actionButtons">
-                  <button type="button">Vender</button>
-                  <button type="button">Comprar</button>
-                </td>
-              </tr>
+              {arrayAcoesDisp.map((action: any, i: number) => (
+                <tr key={action.name}>
+                  <td className="actionName">{action.name}</td>
+                  <td>{action.qtd}</td>
+                  <td>{`R$${action.value},00`}</td>
+                  <td className="actionButtons">
+                    <button
+                      onClick={redirectNegotiate}
+                      className="buy"
+                      type="button"
+                    >
+                      Comprar
+                    </button>
+                    <button
+                      onClick={redirectNegotiate}
+                      disabled
+                      className="sell"
+                      type="button"
+                    >
+                      Vender
+                    </button>
+                  </td>
+                </tr>
+              ))}
             </table>
           </div>
+        </section>
+        <section className="negotiatePopup">
+          <h1>Comprar/Vender Ação</h1>
         </section>
       </main>
     </div>
