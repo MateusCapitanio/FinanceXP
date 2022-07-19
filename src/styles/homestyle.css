@@ -49,7 +49,7 @@ body {
 .actionsStyle {
     display: flex;
     flex-direction: column;
-    background: #1c1c1c;
+    background: rgb(28, 28, 28);
     margin: 0px 25px;
 }
 

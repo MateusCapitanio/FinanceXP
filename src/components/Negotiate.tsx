@@ -43,7 +43,7 @@ function Negotiate() {
               <input
                 min={0}
                 autoFocus
-                placeholder="Digite um valor..."
+                placeholder="Digite a quantidade..."
                 type="number"
               />
             </div>
@@ -51,7 +51,7 @@ function Negotiate() {
               <button className="sell" type="button">
                 Vender
               </button>
-              <input placeholder="Digite um valor..." type="number" />
+              <input placeholder="Digite a quantidade..." type="number" />
             </div>
           </section>
         </div>

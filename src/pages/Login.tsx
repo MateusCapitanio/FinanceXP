@@ -10,11 +10,12 @@ function Login() {
   const [validateEmail, setValidadeEmail] = useState(false);
   const [validateSenha, setValidadeSenha] = useState(false);
   const [email, setEmail] = useState("");
+  const [userLoged, setUserLoged] = useState("");
 
   useEffect(() => {
     const valueReturn = localStorage.getItem("user");
     if (valueReturn !== null) {
-      navigate("/home");
+      setUserLoged(valueReturn);
     }
   }, []);
 
@@ -46,6 +47,9 @@ function Login() {
 
   return (
     <div>
+      <span className="userLoged">
+        <p>Último login: {userLoged}</p>
+      </span>
       <main className="main">
         <section className="loginSection">
           <h1>Login</h1>

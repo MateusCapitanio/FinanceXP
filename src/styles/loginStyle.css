@@ -71,3 +71,16 @@ body {
     background: grey;
     cursor: default;
 }
+
+.userLoged {
+    display: flex;
+    justify-content: flex-end;
+    margin: 10px;
+}
+
+.userLoged p {
+    background: white;
+    padding: 5px;
+    font-size: 1rem;
+    border-radius: 50px;
+}

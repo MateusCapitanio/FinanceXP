@@ -26,7 +26,6 @@ function Home() {
   }, []);
 
   const logoutFunc = () => {
-    localStorage.clear();
     navigate("/");
   };
 
