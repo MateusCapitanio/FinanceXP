@@ -4,6 +4,7 @@ import Negotiate from "./components/Negotiate";
 import Provider from "./contexts/Provider";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
+import Notfound from "./pages/Notfound";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Route path="/" element={<Login />} />
           <Route path="/home" element={<Home />} />
           <Route path="/negotiate" element={<Negotiate />} />
+          <Route path="*" element={<Notfound />} />
         </Routes>
       </Provider>
     </BrowserRouter>

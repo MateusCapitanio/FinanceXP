@@ -6,11 +6,12 @@ import { arrayAcoes } from "../utils/acoes";
 
 // CSS
 import "../styles/homestyle.css";
+import Negotiate from "../components/Negotiate";
 
 function Home() {
   const navigate = useNavigate();
   const context: any = useContext(myContext);
-  const { arrayAcoesDisp, setArrayAcoesDisp } = context;
+  const { arrayAcoesDisp, setArrayAcoesDisp, setItemNegotiate } = context;
 
   const [user, setUser]: [user: string, setUser: any] = useState("");
 
@@ -29,7 +30,11 @@ function Home() {
     navigate("/");
   };
 
-  const redirectNegotiate = () => {
+  const redirectNegotiate = ({ target }: any) => {
+    const objFiltred = arrayAcoesDisp.filter(
+      (action: any) => action.name === target.id
+    );
+    setItemNegotiate(objFiltred);
     navigate("/negotiate");
   };
 
@@ -77,6 +82,7 @@ function Home() {
                     <button
                       onClick={redirectNegotiate}
                       className="buy"
+                      id={action.name}
                       type="button"
                     >
                       Comprar
@@ -85,6 +91,7 @@ function Home() {
                       onClick={redirectNegotiate}
                       disabled
                       className="sell"
+                      id={action.name}
                       type="button"
                     >
                       Vender

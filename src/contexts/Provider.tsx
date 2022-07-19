@@ -1,18 +1,23 @@
-import React, { useMemo, useState } from "react";
+import React, { useState } from "react";
 
-import { IChildren } from "../interfaces/Children";
 import myContext from "./myContext";
 
-function Provider({ children }: IChildren) {
+function Provider({ children }: any) {
   const [arrayAcoesDisp, setArrayAcoesDisp] = useState([]);
   const [arrayAcoesComp, setArrayAcoesComp] = useState([]);
+  const [itemNegotiate, setItemNegotiate] = useState([]);
+  const [saldo, setSaldo] = useState(5000);
 
   // eslint-disable-next-line react/jsx-no-constructed-context-values
-  const value: any = {
+  const value: object = {
     arrayAcoesDisp,
     setArrayAcoesDisp,
     arrayAcoesComp,
     setArrayAcoesComp,
+    itemNegotiate,
+    setItemNegotiate,
+    saldo,
+    setSaldo,
   };
 
   return <myContext.Provider value={value}>{children}</myContext.Provider>;
