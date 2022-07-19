@@ -27,12 +27,57 @@ function Home() {
       <main>
         <header className="header">
           <div>
-            <h2 className="user">{`Usuário: ${JSON.parse(user)}`}</h2>
+            <h2 className="user">{`Usuário: ${user}`}</h2>
             <button onClick={logoutFunc} className="logout" type="button">
               Sair
             </button>
           </div>
         </header>
+        <section className="actionsStyle">
+          <div>Minhas ações:</div>
+          <div className="scrollMenu">
+            <table>
+              <tr className="descriptions">
+                <th>Ação</th>
+                <th>Quantidade</th>
+                <th>Valor (R$)</th>
+                <th>Negociar</th>
+              </tr>
+              <tr>
+                <td>Alfreds Futterkiste</td>
+                <td>Maria Anders</td>
+                <td>Germany</td>
+                <td className="actionButtons">
+                  <button type="button">Vender</button>
+                  <button type="button">Comprar</button>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </section>
+
+        <section className="actionsStyle">
+          <div>Disponíveis para investir:</div>
+          <div className="scrollMenu">
+            <table>
+              <tr className="descriptions">
+                <th>Ação</th>
+                <th>Quantidade</th>
+                <th>Valor (R$)</th>
+                <th>Negociar</th>
+              </tr>
+              <tr>
+                <td>Alfreds Futterkiste</td>
+                <td>Maria Anders</td>
+                <td>Germany</td>
+                <td className="actionButtons">
+                  <button type="button">Vender</button>
+                  <button type="button">Comprar</button>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </section>
       </main>
     </div>
   );

@@ -45,3 +45,61 @@ body {
 .logout:hover {
     opacity: 0.8;
 }
+
+.actionsStyle {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    margin: 10px;
+}
+
+.actionsStyle div {
+    background: #1c1c1c;
+    color: white;
+    padding: 10px;
+    margin: 0px 0px 10px 0px;
+}
+
+.scrollMenu {
+    overflow: auto;
+    white-space: nowrap;
+}
+
+.scrollMenu a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    margin: 0px 10px;
+    font-size: 1rem;
+}
+
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+}
+
+table {
+    padding: 10px;
+    width: 100%;
+}
+
+/* .actionButtons {
+    display: flex;
+    justify-content: space-around;
+} */
+
+.actionButtons button {
+    background: green;
+    padding: 10px;
+    margin: 0px 10px;
+    border: none;
+}
+
+.descriptions th {
+    background: rgb(254, 254, 75);
+    border: none;
+    color: #1c1c1c;
+    margin: 10px;
+}
