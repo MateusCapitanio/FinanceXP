@@ -11,7 +11,7 @@ body {
 }
 
 .painelStyle {
-    background: #1c1c1c;
+    background: rgb(28, 28, 28);
     color: white;
     margin: 5% 20%;
     padding: 10px;
@@ -42,8 +42,17 @@ table {
 }
 
 .titles {
-    background: #FFE04B;
-    color: #1c1c1c;
+    background: #F49237;
+    color: rgb(28, 28, 28);
+}
+
+.titles th:first-child {
+    /* border-radius: 8px 0px 0px 8px; */
+    border-radius: 50px;
+}
+
+.titles th:last-child {
+    border-radius: 0px 8px 8px 0px;
 }
 
 .btnSection {
@@ -58,7 +67,6 @@ table {
     border: none;
     width: 120px;
     border-radius: 5px;
-    cursor: pointer;
     margin: 5px;
     font-size: 1rem;
 }
@@ -69,6 +77,11 @@ table {
 
 .sell {
     background: #77dd77;
+}
+
+.sell:disabled {
+    background: grey;
+    cursor: default;
 }
 
 .divInput1 input {
@@ -86,7 +99,7 @@ table {
 }
 
 .saldo {
-    background: #FFE04B;
+    background: #F49237;
     display: inline-block;
     font-weight: 800;
     padding: 10px;
@@ -104,7 +117,7 @@ table {
 
 .btnConfirmBack button {
     border: none;
-    background: #FFE04B;
+    background: #F49237;
     margin: 5px;
     padding: 12px;
     border-radius: 5px;
@@ -113,7 +126,7 @@ table {
     cursor: pointer;
 }
 
-.divInput1 input::-webkit-outer-spin-button,
+/* .divInput1 input::-webkit-outer-spin-button,
 .divInput1 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
@@ -131,4 +144,4 @@ table {
 
 .divInput2 input[type=number]{
     -moz-appearance: textfield;
-}
+} */

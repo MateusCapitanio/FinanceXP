@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Negotiate from "./components/Negotiate";
+import Negotiate from "./pages/Negotiate";
 
 import Provider from "./contexts/Provider";
 import Home from "./pages/Home";

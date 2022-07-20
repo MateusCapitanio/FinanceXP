@@ -1,8 +1,11 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import myContext from "../contexts/myContext";
+import IContext from "../interfaces/Context";
 
 // CSS
 import "../styles/loginStyle.css";
+import { arrayAcoes } from "../utils/acoes";
 
 function Login() {
   const navigate = useNavigate();
@@ -11,12 +14,15 @@ function Login() {
   const [validateSenha, setValidadeSenha] = useState(false);
   const [email, setEmail] = useState("");
   const [userLoged, setUserLoged] = useState("");
+  const context: any = useContext(myContext);
+  const { setArrayAcoesDisp }: IContext = context;
 
   useEffect(() => {
     const valueReturn = localStorage.getItem("user");
     if (valueReturn !== null) {
       setUserLoged(valueReturn);
     }
+    setArrayAcoesDisp(arrayAcoes);
   }, []);
 
   const checkInput = (event?: any): void => {
@@ -65,7 +71,7 @@ function Login() {
               id="senha"
               required
               onChange={checkInput}
-              placeholder="Senha..."
+              placeholder="Senha de mínimo 8 caracteres"
               type="password"
             />
             <button
