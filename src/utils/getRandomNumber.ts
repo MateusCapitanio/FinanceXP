@@ -4,4 +4,6 @@ const getRandomNumber = (min: number, max: number) => {
   return Math.floor(Math.random() * (newMax - newMin)) + newMin;
 };
 
+// const getRandomNumber = setInterval(generateRandomNumber, 1000);
+
 export default getRandomNumber;
