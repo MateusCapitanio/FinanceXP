@@ -3,7 +3,7 @@
     margin: 0;
 }
 
-main {
+.mainNotFound {
     display: flex;
     width: 100%;
     flex-direction: column;
