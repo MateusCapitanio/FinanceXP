@@ -1,7 +1,7 @@
 # Bem-vindo ao Finance XP
 
 Este é um projeto Front-end para o direcionamento de uma aplicação geral que será responsável pela compra e venda de ações.
-Neste projeto o usuário tem o poder de logar dentro da aplicação, comprar e vender ações da maneira que quiser, e caso queira também, poderá depositar dinheiro em sua conta ou fazer uma retirada do seu saldo final gerado na aplicação.
+Neste projeto o usuário tm o poder de logar dentro da aplicação, comprar e vender ações da maneira que quiser, e caso queira também, poderá depositar dinheiro em sua conta ou fazer uma retirada do seu saldo final gerado na aplicação.
 
 ## Para rodar o projeto em sua máquina:
 
