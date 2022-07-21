@@ -43,7 +43,18 @@
 }
 
 .inputTransferValue {
-    margin: 10px;
-    width: 95%;
+    margin-top: 10px;
+    width: 300px;
+    border-radius: 8px;
+    border: none;
     height: 40px;
+}
+
+@media screen and (min-width: 0px) and (max-width: 500px) {
+    .inputTransferValue {
+        margin: 10px;
+        width: 95%;
+        border: none;
+        height: 40px;
+    }
 }
