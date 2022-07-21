@@ -23,3 +23,7 @@ A aplicação será executada no seu terminal e abrirá uma aba no seu navegador
 ## Deploy da aplicação:
 
 O deploy da aplicação foi feito através do `Heroku` e está online através do [link](https://financexp.herokuapp.com)
+
+## Feedback sobre tests:
+
+Intelizmemte não consegui realizar os testes nessa aplicação por alguns erros de compatibilidades que tive durante o desenvolvimento.
