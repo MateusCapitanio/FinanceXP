@@ -26,11 +26,9 @@ function Home() {
       navigate("/home");
     }
     setUser(valueReturn);
-    setArrayAcoesDisp(arrayAcoes);
   }, []);
 
   const logoutFunc = () => {
-    // setArrayAcoesDisp(arrayAcoes);
     setArrayAcoesComp([]);
 
     navigate("/");

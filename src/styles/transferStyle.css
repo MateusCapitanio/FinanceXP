@@ -1,0 +1,49 @@
+.btnTransferSection {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+#btnTransferDepo {
+    background: #77dd77;
+    border: none;
+    width: 150px;
+    margin: 10px;
+    padding: 10px;
+    opacity: 0.9;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#btnTransferDepo:hover {
+    opacity: 1;
+}
+
+#btnTransferSaque {
+    background: #79B2E9;
+    border: none;
+    width: 150px;
+    margin: 10px;
+    padding: 10px;
+    opacity: 0.9;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#btnTransferSaque:hover {
+    opacity: 1;
+}
+
+.inputConfirm {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.inputTransferValue {
+    margin: 10px;
+    width: 95%;
+    height: 40px;
+}
