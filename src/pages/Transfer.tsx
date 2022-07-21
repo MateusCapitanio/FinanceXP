@@ -5,8 +5,8 @@ import { useNavigate } from "react-router-dom";
 
 import myContext from "../contexts/myContext";
 import IContext from "../interfaces/Context";
-
 import "../styles/transferStyle.css";
+import onlynumber from "../utils/onlyNumber";
 
 function Transfer() {
   const navigate = useNavigate();
@@ -46,18 +46,6 @@ function Transfer() {
 
   const redirectHome = () => {
     navigate("/home");
-  };
-
-  const onlynumber = (evt: any) => {
-    const theEvent = evt || window.event;
-    let key = theEvent.keyCode || theEvent.which;
-    key = String.fromCharCode(key);
-    // var regex = /^[0-9.,]+$/;
-    const regex = /^[0-9.]+$/;
-    if (!regex.test(key)) {
-      theEvent.returnValue = false;
-      if (theEvent.preventDefault) theEvent.preventDefault();
-    }
   };
 
   const captureValue = ({ target }: any) => {

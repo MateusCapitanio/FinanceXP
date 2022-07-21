@@ -8,6 +8,7 @@ import myContext from "../contexts/myContext";
 import IContext from "../interfaces/Context";
 
 import "../styles/negotiateStyle.css";
+import onlynumber from "../utils/onlyNumber";
 
 function Negotiate() {
   const navigate = useNavigate();
@@ -114,6 +115,10 @@ function Negotiate() {
 
     setArrayAcoesDisp(arrayAtualizado);
 
+    if (inputBuy.value === "" && inputSell.value === "") {
+      return alert("É necessário informar pelo menos um valor.");
+    }
+
     const resultCalc = calcActions(
       parseFloat(inputBuy.value),
       parseFloat(inputSell.value)
@@ -121,18 +126,6 @@ function Negotiate() {
     if (typeof resultCalc === "string") return alert(resultCalc);
     setSaldo(resultCalc);
     return navigate("/home");
-  };
-
-  const onlynumber = (evt: any) => {
-    const theEvent = evt || window.event;
-    let key = theEvent.keyCode || theEvent.which;
-    key = String.fromCharCode(key);
-    // var regex = /^[0-9.,]+$/;
-    const regex = /^[0-9.]+$/;
-    if (!regex.test(key)) {
-      theEvent.returnValue = false;
-      if (theEvent.preventDefault) theEvent.preventDefault();
-    }
   };
 
   return (
