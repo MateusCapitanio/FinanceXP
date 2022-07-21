@@ -26,4 +26,4 @@ O deploy da aplicação foi feito através do `Heroku` e está online através d
 
 ## Feedback sobre tests:
 
-Intelizmemte não consegui realizar os testes nessa aplicação por alguns erros de compatibilidades que tive durante o desenvolvimento.
+Intelizmemte não consegui realizar os testes nessa aplicação por alguns erros de compatibilidades do `jest` com o `typescript` que tive durante o desenvolvimento.
