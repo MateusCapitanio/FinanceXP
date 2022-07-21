@@ -1,3 +1,5 @@
+/* eslint-disable no-alert */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable jsx-a11y/no-autofocus */
 import React, { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -22,8 +24,12 @@ function Negotiate() {
     setSaldo,
   }: IContext = context;
   const { name, qtd, value } = itemNegotiate[0];
+  const [user, setUser]: [user: string, setUser: any] = useState("");
 
   useEffect(() => {
+    const valueReturn: string | null = localStorage.getItem("user");
+    setUser(valueReturn);
+
     if (qtd === 1) {
       setSellDisable(!sellDisable);
     }
@@ -60,11 +66,6 @@ function Negotiate() {
     const saldoFinal =
       qtdSellConverted * value + saldo - qtdBuyConverted * value;
 
-    // const arrayCompAtualizado = [
-    //   ...arrayAcoesComp,
-    //   { name, qtd: qtdActions, value },
-    // ];
-
     const arrayCompFiltred = arrayAcoesComp.filter(
       (action: any) => action.name !== name
     );
@@ -79,7 +80,7 @@ function Negotiate() {
     }
 
     if (qtdActions < 0) {
-      return "Você não pode vender mais do que o máx de ações que possui";
+      return "Você não pode vender mais do que o máx de ações que possui.";
     }
 
     if (qtdActions === 0) {
@@ -104,7 +105,6 @@ function Negotiate() {
   };
 
   const checkActions = () => {
-    // const result = arrayAcoesComp.find((action: any) => action.name === name);
     const inputBuy: any = document.querySelector("#buyInput");
     const inputSell: any = document.querySelector("#sellInput");
 
@@ -137,6 +137,9 @@ function Negotiate() {
 
   return (
     <main className="mainNegotiate">
+      <div className="divUser">
+        <span className="user">{`Usuário: ${user}`}</span>
+      </div>
       <section className="painelStyle">
         <h1>Comprar/Vender Ação:</h1>
         <p className="saldo">{`Saldo: R$${saldo},00`}</p>

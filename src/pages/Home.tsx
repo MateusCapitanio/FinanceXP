@@ -5,12 +5,18 @@ import { useNavigate } from "react-router-dom";
 import "../styles/homestyle.css";
 import myContext from "../contexts/myContext";
 import IContext from "../interfaces/Context";
+import { arrayAcoes } from "../utils/acoes";
 
 function Home() {
   const navigate = useNavigate();
   const context: any = useContext(myContext);
-  const { arrayAcoesDisp, setItemNegotiate, arrayAcoesComp }: IContext =
-    context;
+  const {
+    arrayAcoesDisp,
+    setItemNegotiate,
+    arrayAcoesComp,
+    setArrayAcoesDisp,
+    setArrayAcoesComp,
+  }: IContext = context;
 
   const [user, setUser]: [user: string, setUser: any] = useState("");
 
@@ -20,9 +26,13 @@ function Home() {
       navigate("/home");
     }
     setUser(valueReturn);
+    setArrayAcoesDisp(arrayAcoes);
   }, []);
 
   const logoutFunc = () => {
+    // setArrayAcoesDisp(arrayAcoes);
+    setArrayAcoesComp([]);
+
     navigate("/");
   };
 
@@ -39,6 +49,10 @@ function Home() {
     }
     setItemNegotiate(objFiltred);
     return navigate("/negotiate");
+  };
+
+  const redirectTransfer = () => {
+    return navigate("/transfer");
   };
 
   return (
@@ -129,6 +143,11 @@ function Home() {
               ))}
             </table>
           </div>
+        </section>
+        <section className="btnTransfer">
+          <button onClick={redirectTransfer} type="button">
+            Depósito/Retirada
+          </button>
         </section>
       </main>
     </div>

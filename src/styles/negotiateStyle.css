@@ -10,15 +10,23 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+.divUser {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.user {
+    color: #1c1c1c;
+}
+
 .painelStyle {
     background: rgb(28, 28, 28);
     color: white;
     margin: 5% 20%;
     padding: 10px;
-    border: solid 1px #F49237;
     border-radius: 12px;
-    box-shadow:  1px 1px 20px #F49237,
-             -1px -1px 20px #F49237;
+    box-shadow:  1px 1px 20px rgb(244, 146, 55, .5),
+             -1px -1px 20px rgb(244, 146, 55, .5);
 }
 
 @media screen and (min-width: 0px) and (max-width: 800px){
@@ -124,6 +132,8 @@ table {
     background: #F49237;
     margin: 5px;
     padding: 12px;
+    font-weight: 500;
+    color: #1c1c1c;
     border-radius: 5px;
     width: 150px;
     font-size: 1rem;
