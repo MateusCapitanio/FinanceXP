@@ -16,6 +16,7 @@ A aplicação será executada no seu terminal e abrirá uma aba no seu navegador
 - ReactJs;
 - ContextApi;
 - Typescript;
+- ESlint;
 - React Router;
 - React Hooks;
 - `CSS` puro.
