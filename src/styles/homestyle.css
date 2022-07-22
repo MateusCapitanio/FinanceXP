@@ -18,8 +18,12 @@ body {
 }
 
 .user {
-    background: #F49237;
-    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    width: 180px;
+    justify-content: space-between;
+    background: #FF7965;
+    font-size: 1rem;
     margin: 10px;
     padding: 5px 10px;
     border-radius: 50px;
@@ -35,6 +39,9 @@ body {
 }
 
 .logout {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
     background: rgb(221, 32, 32);
     align-self: flex-end;
     width: 100px;
@@ -43,6 +50,7 @@ body {
     padding: 10px;
     border-radius: 50px;
     font-size: 0.9rem;
+    font-weight: 500;
     cursor: pointer;
     color: white;
 }
@@ -118,7 +126,7 @@ table {
 }
 
 .descriptions th {
-    background: #F49237;
+    background: #FF7965;
     border: none;
     color: #1c1c1c;
 }
@@ -135,7 +143,7 @@ table {
     display: inline-block;
     width: 200px;
     border-radius: 8px;
-    background: #F49237;
+    background: #FF7965;
     color: #1c1c1c;
 }
 
@@ -146,38 +154,48 @@ table {
 }
 
 .btnTransfer button {
-    background: #F49237;
+    background: #FF7965;
     border: none;
-    padding: 10px;
+    padding: 12px;
     font-weight: 500;
     color: #1c1c1c;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     border-radius: 8px;
     cursor: pointer;
 }
 
 @media screen and (min-width: 0px) and ((max-width: 500px)) {
     .btnTransfer button {
-        background: #F49237;
+        background: #FF7965;
         border: none;
-        padding: 10px;
+        padding: 12px;
         font-weight: 500;
         color: #1c1c1c;
-        font-size: 1.5rem;
+        font-size: 1.4rem;
         border-radius: 8px;
         cursor: pointer;
     }
 }
 
 .btnTransfer button:hover {
-    background: #F49237;
+    background: #FF7965;
     border: none;
-    padding: 10px;
+    padding: 12px;
     font-weight: 500;
     color: #1c1c1c;
     font-size: 1.5rem;
     border-radius: 8px;
-    box-shadow:  1px 1px 8px rgb(244, 146, 55, .5),
-             -1px -1px 8px rgb(244, 146, 55, .5);
+    box-shadow:  1px 1px 8px rgb(255, 121, 101, .5),
+             -1px -1px 8px rgb(255, 121, 101, .5);
     transition: 0.5s;
+}
+
+.btnClickTransfer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btnClickTransfer p {
+    margin-right: 10px;
 }

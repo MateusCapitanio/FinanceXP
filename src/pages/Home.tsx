@@ -1,11 +1,12 @@
 import { useContext, useEffect, useState } from "react";
+import { BiLogOut, BiTransfer } from "react-icons/bi";
+import { FaUserCircle } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 
 // CSS
 import "../styles/homestyle.css";
 import myContext from "../contexts/myContext";
 import IContext from "../interfaces/Context";
-import { arrayAcoes } from "../utils/acoes";
 
 function Home() {
   const navigate = useNavigate();
@@ -14,7 +15,6 @@ function Home() {
     arrayAcoesDisp,
     setItemNegotiate,
     arrayAcoesComp,
-    setArrayAcoesDisp,
     setArrayAcoesComp,
   }: IContext = context;
 
@@ -58,9 +58,11 @@ function Home() {
       <main>
         <header className="header">
           <div className="userLogout">
-            <span className="user">{`Usuário: ${user}`}</span>
+            <span className="user">
+              <FaUserCircle size={30} /> {`  ${user}`}
+            </span>
             <button onClick={logoutFunc} className="logout" type="button">
-              Sair
+              Sair <BiLogOut size={25} />
             </button>
           </div>
         </header>
@@ -143,8 +145,12 @@ function Home() {
           </div>
         </section>
         <section className="btnTransfer">
-          <button onClick={redirectTransfer} type="button">
-            Depósito/Retirada
+          <button
+            className="btnClickTransfer"
+            onClick={redirectTransfer}
+            type="button"
+          >
+            <p>Transferências</p> <BiTransfer size={35} />
           </button>
         </section>
       </main>

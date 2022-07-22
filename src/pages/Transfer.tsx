@@ -2,6 +2,12 @@
 /* eslint-disable no-alert */
 // subindo para o heroku
 import { useContext, useEffect, useState } from "react";
+import { AiOutlineArrowUp } from "react-icons/ai";
+import {
+  BsFillArrowDownCircleFill,
+  BsFillArrowUpCircleFill,
+} from "react-icons/bs";
+import { FaUserCircle } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 
 import myContext from "../contexts/myContext";
@@ -81,10 +87,12 @@ function Transfer() {
   return (
     <main>
       <div className="divUser">
-        <span className="user">{`Usuário: ${user}`}</span>
+        <span className="user">
+          <FaUserCircle size={30} /> {`  ${user}`}
+        </span>
       </div>
       <section className="painelStyle">
-        <h1>Depósito/Retirada</h1>
+        <h1>Transferências</h1>
         <p className="saldo">{`Saldo: R$${saldo},00`}</p>
 
         <div className="btnTransferSection">
@@ -94,6 +102,7 @@ function Transfer() {
             type="button"
           >
             Depositar
+            <BsFillArrowDownCircleFill size={25} color="#1c1c1c" />
           </button>
           <button
             id="btnTransferSaque"
@@ -101,6 +110,7 @@ function Transfer() {
             type="button"
           >
             Retirar
+            <BsFillArrowUpCircleFill size={25} color="#1c1c1c" />
           </button>
         </div>
         <section className="inputConfirm">
