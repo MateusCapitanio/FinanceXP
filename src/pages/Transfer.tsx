@@ -2,12 +2,11 @@
 /* eslint-disable no-alert */
 // subindo para o heroku
 import { useContext, useEffect, useState } from "react";
-import { AiOutlineArrowUp } from "react-icons/ai";
 import {
   BsFillArrowDownCircleFill,
   BsFillArrowUpCircleFill,
 } from "react-icons/bs";
-import { FaUserCircle } from "react-icons/fa";
+import { BiUserCircle } from "react-icons/bi";
 import { useNavigate } from "react-router-dom";
 
 import myContext from "../contexts/myContext";
@@ -87,9 +86,7 @@ function Transfer() {
   return (
     <main>
       <div className="divUser">
-        <span className="user">
-          <FaUserCircle size={30} /> {`  ${user}`}
-        </span>
+        <span className="user">{`Usuário: ${user}`}</span>
       </div>
       <section className="painelStyle">
         <h1>Transferências</h1>

@@ -2,7 +2,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable jsx-a11y/no-autofocus */
 import React, { useContext, useEffect, useState } from "react";
-import { FaUserCircle } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 
 import myContext from "../contexts/myContext";
@@ -132,9 +131,7 @@ function Negotiate() {
   return (
     <main className="mainNegotiate">
       <div className="divUser">
-        <span className="user">
-          <FaUserCircle size={30} /> {`  ${user}`}
-        </span>
+        <span className="user">{`Usuário: ${user}`}</span>
       </div>
       <section className="painelStyle">
         <h1>Comprar/Vender Ação:</h1>

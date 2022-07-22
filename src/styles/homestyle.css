@@ -19,9 +19,6 @@ body {
 
 .user {
     display: flex;
-    align-items: center;
-    width: 180px;
-    justify-content: space-between;
     background: #FF7965;
     font-size: 1rem;
     margin: 10px;

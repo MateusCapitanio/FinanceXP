@@ -1,6 +1,5 @@
 import { useContext, useEffect, useState } from "react";
 import { BiLogOut, BiTransfer } from "react-icons/bi";
-import { FaUserCircle } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 
 // CSS
@@ -58,9 +57,7 @@ function Home() {
       <main>
         <header className="header">
           <div className="userLogout">
-            <span className="user">
-              <FaUserCircle size={30} /> {`  ${user}`}
-            </span>
+            <span className="user">{`Usuário: ${user}`}</span>
             <button onClick={logoutFunc} className="logout" type="button">
               Sair <BiLogOut size={25} />
             </button>
