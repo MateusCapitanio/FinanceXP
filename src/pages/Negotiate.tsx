@@ -31,7 +31,11 @@ function Negotiate() {
     const valueReturn: string | null = localStorage.getItem("user");
     setUser(valueReturn);
 
-    if (qtd === 1) {
+    const checkItem = arrayAcoesComp.find(
+      (action: any) => action.name === name
+    );
+
+    if (qtd === 1 && checkItem === undefined) {
       setSellDisable(!sellDisable);
     }
   }, []);
