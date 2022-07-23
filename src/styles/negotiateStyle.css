@@ -59,8 +59,7 @@ table {
 }
 
 .titles th:first-child {
-    /* border-radius: 8px 0px 0px 8px; */
-    border-radius: 50px;
+    border-radius: 8px 0px 0px 8px;
 }
 
 .titles th:last-child {
