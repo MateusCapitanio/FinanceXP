@@ -3,7 +3,7 @@
 Este é um projeto Front-end para o direcionamento de uma aplicação geral que será responsável pela compra e venda de ações.
 Neste projeto o usuário têm o poder de logar dentro da aplicação, comprar e vender ações da maneira que quiser, e caso queira também, poderá depositar dinheiro em sua conta ou fazer uma retirada do seu saldo final gerado na aplicação.
 
-## Tomadas de decisões
+## Tomadas de decisões:
 
 Eu decidi utilizar o `typescript` juntamente do `ESlint` para a execução do projeto para ter uma tipagem mais assertiva no desenvolvimento, como a aplicação não é muito extensa, decidi usar o `ContextApi` para o gerenciamento de estado da aplicação, o `React Router`
 para fazer as trocas entre páginas a serem exibidas no manuseio das rotas e a estilização foi feita com `CSS` puro.
