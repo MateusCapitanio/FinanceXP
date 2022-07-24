@@ -18,8 +18,13 @@ body {
 }
 
 .animationdiv {
-    width: 300px;
-    margin-left: -50px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: -35px;
+}
+
+.loginImage {
+    width: 350px;
 }
 
 .loginSection {
@@ -64,7 +69,7 @@ body {
     margin: 10px;
     width: 280px;
     border-radius: 50px;
-    background: #FF7965;
+    background: #09A9E2;
     color: #1c1c1c;
     font-weight: 500;
     font-size: 18px;
@@ -84,7 +89,7 @@ body {
 }
 
 .userLoged p {
-    background: #FF7965;
+    background: #09A9E2;
     padding: 5px;
     font-size: 1rem;
     border-radius: 50px;

@@ -1,9 +1,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { useContext, useEffect, useState } from "react";
-import Lottie from "react-lottie";
 import { useNavigate } from "react-router-dom";
 
-import animationData from "../assets/loginAnimation.json";
+import login from "../assets/login.png";
 import myContext from "../contexts/myContext";
 import IContext from "../interfaces/Context";
 // CSS
@@ -54,15 +53,6 @@ function Login() {
     navigate("/home");
   };
 
-  const defaultOptions = {
-    loop: true,
-    autoplay: true,
-    animationData,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  };
-
   return (
     <div>
       <span className="userLoged">
@@ -71,9 +61,8 @@ function Login() {
       <main className="mainLogin">
         <section className="loginSection">
           <div className="animationdiv">
-            <Lottie options={defaultOptions} height={300} width={300} />
+            <img className="loginImage" src={login} alt="loginImage" />
           </div>
-          {/* <h1 className="titleFinance">Finance XP</h1> */}
           <form>
             <input
               id="email"
