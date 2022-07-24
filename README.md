@@ -34,6 +34,6 @@ O deploy da aplicação foi feito pelo `Heroku` e está online através do [link
 
 ## Feedback sobre tests:
 
-Intelizmemte não consegui realizar os testes nessa aplicação por alguns erros de compatibilidade do `Jest` com o `Typescript`, e também por um erro de reconhecimento do `Jest` com o `React Router`,
+Os testes nessa aplicação não foram realizados por alguns erros de compatibilidade do `Jest` com o `Typescript`, e também por um erro de reconhecimento do `Jest` com o `React Router`,
 por algum motivo o `Jest` não conseguia identificar a aplicação dentro do componente `Router` da biblioteca e os testes quebravam.
 Dentre os dois problemas eu estudei em fóruns sobre os temas, em documentações e videos no youtube para encontrar uma solução, mas infelizmente não encontrei nada que solucionasse esses problemas.
