@@ -24,7 +24,6 @@ A aplicação será executada no seu terminal e abrirá uma aba no seu navegador
 - ESlint;
 - React Router;
 - React Icons;
-- Lottiefiles;
 - React Hooks;
 - `CSS` puro.
 
