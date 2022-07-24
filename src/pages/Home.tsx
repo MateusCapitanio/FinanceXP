@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useContext, useEffect, useState } from "react";
 import { BiLogOut, BiTransfer } from "react-icons/bi";
 import { useNavigate } from "react-router-dom";

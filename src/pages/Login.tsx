@@ -1,12 +1,11 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useContext, useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
 import Lottie from "react-lottie";
+import { useNavigate } from "react-router-dom";
 
 import animationData from "../assets/loginAnimation.json";
-
 import myContext from "../contexts/myContext";
 import IContext from "../interfaces/Context";
-
 // CSS
 import "../styles/loginStyle.css";
 import { arrayAcoes } from "../utils/acoes";

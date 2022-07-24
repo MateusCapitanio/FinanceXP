@@ -6,7 +6,6 @@ import { useNavigate } from "react-router-dom";
 
 import myContext from "../contexts/myContext";
 import IContext from "../interfaces/Context";
-
 import "../styles/negotiateStyle.css";
 import onlynumber from "../utils/onlyNumber";
 

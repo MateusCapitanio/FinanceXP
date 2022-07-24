@@ -1,5 +1,5 @@
-import React from "react";
 import Lottie from "react-lottie";
+
 import animationData from "../assets/notFoundAnimation.json";
 
 import "../styles/notFoundStyle.css";

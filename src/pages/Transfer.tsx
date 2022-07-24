@@ -6,7 +6,6 @@ import {
   BsFillArrowDownCircleFill,
   BsFillArrowUpCircleFill,
 } from "react-icons/bs";
-import { BiUserCircle } from "react-icons/bi";
 import { useNavigate } from "react-router-dom";
 
 import myContext from "../contexts/myContext";
