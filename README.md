@@ -27,10 +27,6 @@ A aplicação será executada no seu terminal e abrirá uma aba no seu navegador
 - React Hooks;
 - `CSS` puro.
 
-## Deploy da aplicação:
-
-O deploy da aplicação foi feito pelo `Heroku` e está online através do [link](https://financexp.herokuapp.com)
-
 ## Feedback sobre testes:
 
 Os testes nessa aplicação não foram realizados por alguns erros de compatibilidade do `Jest` com o `Typescript`, e também por um erro de reconhecimento do `Jest` com o `React Router`,
